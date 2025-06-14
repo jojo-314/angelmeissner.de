@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta  name="viewport" id="viewport" content="width=device-width,minimum-scale=1, initial-scale=1" />
+        <meta name="autor" content="Johanna Meißner"/>
+        <title>Angelmeissner Strausberg</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="bilder/logo_klein.png">
+        <script>
+        function openMenu() {
+            let hMenu = document.getElementById('smallNav');
+            if (hMenu.style.display=="block") {
+                hMenu.style.display="none";  
+                document.getElementById("hamburgerIcon").classList.remove("toggleBars")
+            } else {
+                hMenu.style.display="block";
+                document.getElementById("hamburgerIcon").classList.toggle("toggleBars")
+            }
+        }
+        </script>
+    </head>
+    <body background="bilder/Holz.jpg">
+        <!--Hamburger Menü-->
+        <button id="hamburgerIcon" onclick="openMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </button>
+        <div id="smallNav">
+            <nav>
+                <ul>
+                    <li><a id="active" href="index.html">Angelladen</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="angelkarten.html">Angelkarten</a></li>
+                    <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                    <li><a href="kontakt.html">Anfahrt / Kontakt</a></li>
+                    <li><a href="partner.html">Partner</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img class="logo1" src="bilder/logo_klein.png" alt="Logo">
+        <div class="mainDiv">
+            <header>
+                 <!--Navigation große Ansicht-->
+                <nav id="bigNav">
+                    <ul>
+                        <li><a id="active" href="index.html">Angelladen</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="angelkarten.html">Angelkarten</a></li>
+                        <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                        <li><a href="kontakt.html">Anfahrt / Kontakt</a></li>
+                        <li><a href="partner.html">Partner</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <hr>
+            <div>
+                <h1>Angelgeräte Meißner</h1>
+                <h2>Strausberg</h2>
+                &nbsp;
+                <div>
+                    <img class="view" src="bilder/view/view.gif">
+                </div>
+                <p> 
+                    Seit 1990 euer Partner für Angelruten, Rollen, Köder und Angelkarten in Strausberg.<br>
+                    Wir freuen uns auf euren Besuch!<br>
+                    Ihr findet unseren Angelladen im Zentrum der Strausberger Altstadt hinter der Passage
+                    am "Landsberger Tor". 
+                </p>
+            </div>
+            <div>
+                <a href="https://wa.me/message/GU6FSTCU7WGDH1" target="_blank">
+                    <img id="qr1" src="bilder/whatsapp_logo.png" alt="WhatsApp Logo" class="logo1">
+                </a>
+                <p>
+                    Auch über <strong>WhatsApp</strong> erreichbar.<br> unter 03341/23600.
+                <p>
+            </div>
+            &nbsp;
+            <h2>Folge uns</h2>
+            <ul id="social_ul">
+                <li class="social_inline">
+                    <a href="https://www.facebook.com/people/Angelmeissner-Strausberg/100054321199794/" target="_blank">
+                    <img class="socials" src="bilder/facbook_logo.png" alt="Facebook">
+                    </a>
+                </li>
+                <li class="social_inline">
+                    <a href="https://www.instagram.com/angelmeissner/?hl=de" target="_blank">
+                    <img class="socials" src="bilder/instagram_logo.png" alt="Instagram">
+                    </a>
+                </li>
+                <li class="social_inline">
+                    <a href="https://www.youtube.com/channel/UCWyeyJYZaMEzhlDohs8C94g" target="_blank">
+                    <img class="socials" src="bilder/youtube_logo.png" alt="YouTube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer">
+            <footer>
+                <h3>Öffnungszeiten</h3>
+                <p>
+                    <strong>März bis November:</strong><br>
+                    Dienstag - Freitag  9-18 Uhr<br>
+                    Sonnabend 9-12 Uhr<br>
+                    <br>
+                    <strong>Dezember bis Februar:</strong><br>
+                    Dienstag - Freitag 9-17 Uhr 
+                </p>
+                <h3>Adresse</h3>
+                <p>
+                    Angelgeräte Meißner
+                    Grünstr. 
+                    15344 Strausberg
+                    Tel. 03341 23600 
+                </p>
+                <img class="logo1" src="bilder/logo_klein.png" alt="Logo">
+                <ul>
+                    <li><a id="formal" href="impressum.html">Impressum</a></li>
+                    <li><a id="formal" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>

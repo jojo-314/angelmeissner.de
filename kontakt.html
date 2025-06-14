@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Kontakt</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="bilder/logo_klein.png">
+        <script>
+            function openMenu() {
+                let hMenu = document.getElementById('smallNav');
+                if (hMenu.style.display=="block") {
+                    hMenu.style.display="none";  
+                    document.getElementById("hamburgerIcon").classList.remove("toggleBars")
+                } else {
+                    hMenu.style.display="block";
+                    document.getElementById("hamburgerIcon").classList.toggle("toggleBars")
+                }
+            }
+            </script>
+    </head>
+    <body background="bilder/Holz.jpg">
+        <button id="hamburgerIcon" onclick="openMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </button>
+        <div id="smallNav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Angelladen</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="angelkarten.html">Angelkarten</a></li>
+                    <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                    <li><a id="active" href="kontakt.html">Anfahrt / Kontakt</a></li>
+                    <li><a href="partner.html">Partner</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img class="logo1" src="bilder/logo_klein.png" alt="Logo">
+            <div class="mainDiv">
+                <header>
+                    <nav id="bigNav">
+                        <ul>
+                            <li><a href="index.html">Angelladen</a></li>
+                            <li><a href="news.html">News</a></li>
+                            <li><a href="angelkarten.html">Angelkarten</a></li>
+                            <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                            <li><a id="active" href="kontakt.html">Anfahrt / Kontakt</a></li>
+                            <li><a href="partner.html">Partner</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <hr>
+                <p class="txt" >
+                    <a id="maps_link" href="https://maps.google.com/maps?ll=52.577445,13.883119&z=16&t=m&hl=de&gl=US&mapclient=embed&q=Gr%C3%BCnstra%C3%9Fe%202%2015344%20Strausberg" target="_blank">
+                        Finde uns hier!
+                    </a>
+                </p>
+                <p>
+                    Grünstr. 2, 15344 Strausberg<br><br>
+                    Telefon: 03341 23600<br>
+                </p>
+                <p>
+                    Email: info(at)angelmeissner.de<br>
+                    Nutze gern unser Kontaktformular!<br><br>
+                    Bitte keine Fragen per Mail zu Angelkarten stellen, sie werden <strong>nicht</strong> beantwortet.<br>Informationen dazu findet ihr auf unserer Website oder telefonisch.
+                </p>
+                  <!--Kontaktformular-->
+                <div class="contact-container">
+                    <h2>Kontaktformular</h2>
+                    <p>Bitte fülle alle Formularfelder aus.</p>
+                    <form action="https://form.taxi/s/bv0hms0b" method="POST">
+                        <!--Betreff-->
+                        <div>
+                            <label for="betreff">Betreff:</label>
+                            <input type="text" id="besuchername" name="Betreff" required>
+                        </div>
+                        <!-- Email-->
+                        <div>
+                            <label for="besuchermail">E-Mail:</label>
+                            <input type="email" id="besuchermail" name="Email" required>
+                        </div>
+                        <!-- Nachricht-->
+                        <div>
+                            <label for="nachricht">Nachricht:</label>
+                            <textarea id="nachricht" name="Nachricht"
+                            cols="30" rows="10" required></textarea>
+                        </div>
+                        <div id="dsgvotxt">
+                            <label>
+                                <input type="checkbox" name="Datenverarbeitung bestätigt" value="Ja" id="dsgvo" required>
+                                <span>
+                                    Ich bin mit der Verarbeitung meiner Eingaben zum Zwecke der Anfragebearbeitung durch <a href="https://form.taxi/de" target="_blank">Form.taxi</a> einverstanden.
+                                </span>
+                            </label>
+                            (<a href="datenschutz.html" target="_blank" id="dsglink">Datenschutzerklärung</a>)
+                        </div>
+                        <button type="submit" value="Send" id="send">Senden</button>
+                    </form>
+                </div>
+            </div>
+         
+            <div class="footer">
+                <footer>
+                    <h3>Öffnungszeiten</h3>
+                    <p>
+                        <strong>März bis November:</strong><br>
+                        Dienstag - Freitag  9-18 Uhr<br>
+                        Sonnabend 9-12 Uhr<br>
+                        <br>
+                        <strong>Dezember bis Februar:</strong><br>
+                        Dienstag - Freitag 9-17 Uhr 
+                    </p>
+                    <h3>Adresse</h3>
+                    <p>
+                        Angelgeräte Meißner
+                        Grünstr. 
+                        15344 Strausberg
+                        Tel. 03341 23600 
+                    </p>
+                    <img class="logo1" src="bilder/logo_klein.png" alt="Logo">
+                    <ul>
+                        <li><a id="formal" href="impressum.html">Impressum</a></li>
+                        <li><a id="formal" href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </footer>
+            </div> 
+    </body>

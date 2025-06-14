@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Fang den Fischi</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var restzeit = 50
+        console.log (restzeit)
+        var klicks = 0
+
+        function spielstart() {
+            restzeit = restzeit
+            klicks = 0
+            alert('Drücke OK um zu starten');
+            zeitzaehler()
+            document.getElementById('clicker').style.display = 'block'
+        }
+        function zeitzaehler() {
+            if (restzeit > 0) {
+                document.getElementById('restzeitanzeige').innerHTML = restzeit
+                restzeit = restzeit -1
+                setTimeout(zeitzaehler,1000)
+            }
+            else {
+                document.getElementById('restzeitanzeige').innerHTML = '0'
+                alert('Du hast Fischi ' + klicks + ' mal gefangen!')
+                document.getElementById('clicker').style.display = 'none'
+                document.getElementById('klickeranzeige').innerHTML = '0'
+
+            }
+        }
+        function geklickt() {
+            console.log('Der Ball wurde geklickt!')
+            klicks = klicks +1
+            document.getElementById('klickeranzeige').innerHTML = klicks
+            var top_neu = Math.random() * 90
+            console.log(top_neu)
+            var left_neu = Math.random() * 90
+            console.log(left_neu)
+         
+            //Roten Punkt an zufällige neue Stelle verschieben
+            document.getElementById('clicker').style.top = top_neu + '%'
+            document.getElementById("clicker").style.left = left_neu + '%'
+        } 
+    </script>
+</head>
+<body>
+    <div class="anzeige">
+        <b>Klicks</b> <span id = "klickeranzeige">0</span>
+    </div>
+    <div class="anzeige">
+        <b>Restzeit</b> <span id="restzeitanzeige"></span>
+    </div>
+    <div>
+        <img  id="clicker"  onclick="geklickt()" src="bilder/Fisch.png">
+    </div>
+    <button id="button" onclick="spielstart()">Neustart</button>
+ <script>
+    spielstart()
+ </script>   
+</body>
+</html>

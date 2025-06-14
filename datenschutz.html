@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>Datenschutz</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="bilder/logo_klein.png">
+        <script>
+            function openMenu() {
+                let hMenu = document.getElementById('smallNav');
+                if (hMenu.style.display=="block") {
+                    hMenu.style.display="none";  
+                    document.getElementById("hamburgerIcon").classList.remove("toggleBars")
+                } else {
+                    hMenu.style.display="block";
+                    document.getElementById("hamburgerIcon").classList.toggle("toggleBars")
+                }
+            }
+            </script>
+    </head>
+    <body background="bilder/Holz.jpg">
+        <img class="logo1" src="bilder/logo_klein.png" alt="Logo">
+        <div class="mainDiv">
+            <header>
+                <!--Hamburger Menü-->
+                <button id="hamburgerIcon" onclick="openMenu()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </button>
+            <div id="smallNav">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Angelladen</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="angelkarten.html">Angelkarten</a></li>
+                        <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                        <li><a href="kontakt.html">Anfahrt / Kontakt</a></li>
+                        <li><a href="partner.html">Partner</a></li>
+                    </ul>
+                </nav>
+            </div>
+                <nav id="bigNav">
+                    <ul>
+                        <li><a href="index.html">Angelladen</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="angelkarten.html">Angelkarten</a></li>
+                        <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                        <li><a href="kontakt.html">Anfahrt / Kontakt</a></li>
+                        <li><a href="partner.html">Partner</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <hr>
+            &nbsp;
+            <h3>Datenschutzerklärung</h3>
+            <h3>reCAPTCHA</h3>
+            <p>
+                Zum Schutz Ihrer Anfragen per Internetformular verwenden wir den Dienst reCAPTCHA des Unternehmens Google LLC (Google). Die Abfrage dient der Unterscheidung, ob die Eingabe durch einen Menschen oder missbräuchlich durch automatisierte, maschinelle Verarbeitung erfolgt. Die Abfrage schließt den Versand der IP-Adresse und ggf. weiterer von Google für den Dienst reCAPTCHA benötigter Daten an Google ein. Zu diesem Zweck wird Ihre Eingabe an Google übermittelt und dort weiter verwendet. Ihre IP-Adresse wird von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung dieses Dienstes auszuwerten. Die im Rahmen von reCaptcha von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Für diese Daten gelten die abweichenden Datenschutzbestimmungen des Unternehmens Google. Weitere Informationen zu den Datenschutzrichtlinien von Google finden Sie unter:<br>
+                <a class="pp" href="https://policies.google.com/privacy?hl=de">https://policies.google.com/privacy?hl=de</a>
+            </p>
+            <h3>Verwendung unseres Kontaktformulars:</h3>
+            <p>
+                 Unsere Internetseite nutzt form.taxi, einen Webdienst der Webseite https://form.taxi (nachfolgend "form.taxi"). Um Ihnen die Funktionalität des Formulars zur Verfügung zu stellen, senden wir die von Ihnen angegebene Daten an form.taxi. Diese Daten werden dort verarbeitet, gespeichert und an uns per E-Mail weitergegeben. Außerdem werden von form.taxi unter anderem weitere Daten wie Ihre IP-Adresse, Ihr Typ des Browsers, die Domain der Webseite, das Datum und die Zeit des Zugriffs erhoben, um die gewünschte Funktionalität des Formulars bereitzustellen. Rechtsgrundlage für die Nutzung von form.taxi ist Art. 6 Abs. 1 S. 1 lit. f DS-GVO (berechtigtes Interesse). Die Datenverarbeitung und Speicherung erfolgt innerhalb der Europäischen Union. Weitere Informationen entnehmen Sie der Datenschutzerklärung von form.taxi: https://form.taxi/de/privacy.
+            </p>
+            &nbsp;
+            <a id ="topscroll" href="#top">⇑ Zum Seitenanfang ⇑</a>
+        </div>
+        <div class="footer">
+            <footer>
+                <h3>Öffnungszeiten</h3>
+                <p>
+                    <strong>März bis November:</strong><br>
+                    Dienstag - Freitag  9-18 Uhr<br>
+                    Sonnabend 9-12 Uhr<br>
+                    <br>
+                    <strong>Dezember bis Februar:</strong><br>
+                    Dienstag - Freitag 9-17 Uhr 
+                </p>
+                <h3>Adresse</h3>
+                <p>
+                    Angelgeräte Meißner
+                    Grünstr. 
+                    15344 Strausberg
+                    Tel. 03341 23600 
+                </p>
+                <img class="logo1" src="bilder/logo_klein.png" alt="Logo">
+                <ul>
+                    <li><a id="formal" href="impressum.html">Impressum</a></li>
+                    <li><a id="formal" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+            </footer>
+        </div> 
+    </body>

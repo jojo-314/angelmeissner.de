@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>News</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="bilder/logo_klein.png">
+        <script>
+            function openMenu() {
+                let hMenu = document.getElementById('smallNav');
+                if (hMenu.style.display=="block") {
+                    hMenu.style.display="none";  
+                    document.getElementById("hamburgerIcon").classList.remove("toggleBars")
+                } else {
+                    hMenu.style.display="block";
+                    document.getElementById("hamburgerIcon").classList.toggle("toggleBars")
+                }
+            }
+            </script>
+    </head>
+    <body background="bilder/Holz.jpg">
+        <button id="hamburgerIcon" onclick="openMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </button>
+        <div id="smallNav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Angelladen</a></li>
+                    <li><a id="active" href="news.html">News</a></li>
+                    <li><a href="angelkarten.html">Angelkarten</a></li>
+                    <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                    <li><a href="kontakt.html">Anfahrt / Kontakt</a></li>
+                    <li><a href="partner.html">Partner</a></li>
+                </ul>
+            </nav>
+        </div>
+        <img class="logo1" src="bilder/logo_klein.png" alt="Logo">
+        <div class="mainDiv">
+            <header>
+                <nav id="bigNav">
+                    <ul>
+                        <li><a href="index.html">Angelladen</a></li>
+                        <li><a id="active" href="news.html">News</a></li>
+                        <li><a href="angelkarten.html">Angelkarten</a></li>
+                        <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                        <li><a href="kontakt.html">Anfahrt / Kontakt</a></li>
+                        <li><a href="partner.html">Partner</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <hr>
+            <div id="newsformat">
+            <p>
+                <!--Hier Text einfügen (Zeile 60 ff)
+                    Für Überschriften folgendes Format: " <h3> Text hier </h3> "
+                    Für Zeilenumbrüche folgendes Format: " <br> " -->
+                <h3>Aktuelles im Angelladen</h3>
+                Hier findet ihr alle wichtigen Ankündigungen. <br>
+                Neue Einträge folgen demnächst.
+                <br><br>
+                <strong>Mitarbeiter des Monats</strong>
+                <br><br>
+                <img id="chico" src="bilder/chico.png" alt="Chico vom Klostersee">
+            </p>
+            </div>
+        </div>
+        <div class="footer">
+            <footer>
+                <h3>Öffnungszeiten</h3>
+                <p>
+                    <strong>März bis November:</strong><br>
+                    Dienstag - Freitag  9-18 Uhr<br>
+                    Sonnabend 9-12 Uhr<br>
+                    <br>
+                    <strong>Dezember bis Februar:</strong><br>
+                    Dienstag - Freitag 9-17 Uhr 
+                </p>
+                <h3>Adresse</h3>
+                <p>
+                    Angelgeräte Meißner
+                    Grünstr. 
+                    15344 Strausberg
+                    Tel. 03341 23600 
+                </p>
+                <img class="logo1" src="bilder/logo_klein.png" alt="Logo">
+                <ul>
+                    <li><a id="formal" href="impressum.html">Impressum</a></li>
+                    <li><a id="formal" href="datenschutz.html">Datenschutz</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
