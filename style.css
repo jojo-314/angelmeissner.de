@@ -524,6 +524,9 @@ display: none;
   .newsimg {
     width: 30vw;
   }
+  #farbanzeige {
+    width: 30vw;
+  }
 
   /*Service*/
   #imgs2 {
@@ -603,6 +606,9 @@ display: none;
 .newsimg {
   width: 20vw;
 }
+#farbanzeige {
+    width: 20vw;
+  }
 
  /*Angelkarten*/
  #angelkartenDiv {
