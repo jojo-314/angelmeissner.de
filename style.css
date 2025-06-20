@@ -351,6 +351,65 @@ input {
 #chico {
   width: 60vw;
 }
+.newsimg {
+  width: 60vw;
+  display: block;
+  margin-top: 5vh;
+}
+#farbanzeige {
+  width: 60vw;
+  padding: 0px;
+  margin-bottom: 3vw;
+}
+
+#farbauswahl {
+  display: inline-block;
+  text-align: center;
+}
+/*https://moderncss.dev/pure-css-custom-styled-radio-buttons/*/
+.radio {
+  width: 10vw;
+  margin: 0;
+  margin-left: 8vw;
+  appearance: none;
+  font: inherit;
+  color: black;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.25em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  place-content: center;
+}
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="radio"]:checked {
+  transform: scale(1);
+}
+#tshirtBlack:checked {
+  background-color: black;
+}
+#tshirtGreen {
+  color:#233000;
+}
+#tshirtGreen:checked {
+  background-color: #233000;
+}
+#tshirtPink {
+  color:#db00db;
+}
+#tshirtPink:checked {
+  background-color:#db00db;
+}
+
 
 /*blanko*/
 #newsformat {
@@ -462,6 +521,9 @@ display: none;
   #chico {
     width: 30vw;
   }
+  .newsimg {
+    width: 30vw;
+  }
 
   /*Service*/
   #imgs2 {
@@ -538,6 +600,10 @@ display: none;
  #chico {
   width: 20vw;
 }
+.newsimg {
+  width: 20vw;
+}
+
  /*Angelkarten*/
  #angelkartenDiv {
   padding-left: 15%;

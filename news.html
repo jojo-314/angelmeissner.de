@@ -1,32 +1,68 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>News</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="bilder/logo_klein.png">
-        <script>
-            function openMenu() {
-                let hMenu = document.getElementById('smallNav');
-                if (hMenu.style.display=="block") {
-                    hMenu.style.display="none";  
-                    document.getElementById("hamburgerIcon").classList.remove("toggleBars")
-                } else {
-                    hMenu.style.display="block";
-                    document.getElementById("hamburgerIcon").classList.toggle("toggleBars")
-                }
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>News</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="bilder/logo_klein.png">
+    <script>
+        function openMenu() {
+            let hMenu = document.getElementById('smallNav');
+            if (hMenu.style.display == "block") {
+                hMenu.style.display = "none";
+                document.getElementById("hamburgerIcon").classList.remove("toggleBars")
+            } else {
+                hMenu.style.display = "block";
+                document.getElementById("hamburgerIcon").classList.toggle("toggleBars")
             }
-            </script>
-    </head>
-    <body background="bilder/Holz.jpg">
-        <button id="hamburgerIcon" onclick="openMenu()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-        </button>
-        <div id="smallNav">
-            <nav>
+        }
+
+        //https://stackoverflow.com/questions/8922002/attach-event-listener-through-javascript-to-radio-button
+
+        // Sobald das Dokument fertig geladen ist
+        document.addEventListener("DOMContentLoaded", function () {
+            // Event Listener für Farbwechsel
+            document.getElementById("farbauswahl").addEventListener("change", function (event) {
+                if (event.target && event.target.matches("input[type='radio']")) {
+                    const farbe = event.target.value;
+                    document.getElementById("farbanzeige").style.backgroundColor = farbe;
+                }
+            });
+
+            // Standardfarbe beim Laden setzen (z. B. bei checked)
+            const checkedRadio = document.querySelector("#farbauswahl input[type='radio']:checked");
+            if (checkedRadio) {
+                document.getElementById("farbanzeige").style.backgroundColor = checkedRadio.value;
+            }
+        });
+
+    </script>
+</head>
+
+<body background="bilder/Holz.jpg">
+    <button id="hamburgerIcon" onclick="openMenu()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+    </button>
+    <div id="smallNav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Angelladen</a></li>
+                <li><a id="active" href="news.html">News</a></li>
+                <li><a href="angelkarten.html">Angelkarten</a></li>
+                <li><a href="serviceangebot.html">Serviceangebot</a></li>
+                <li><a href="kontakt.html">Anfahrt / Kontakt</a></li>
+                <li><a href="partner.html">Partner</a></li>
+            </ul>
+        </nav>
+    </div>
+    <img class="logo1" src="bilder/logo_klein.png" alt="Logo von Angelgeräte Meissner">
+    <div class="mainDiv">
+        <header>
+            <nav id="bigNav">
                 <ul>
                     <li><a href="index.html">Angelladen</a></li>
                     <li><a id="active" href="news.html">News</a></li>
@@ -36,60 +72,57 @@
                     <li><a href="partner.html">Partner</a></li>
                 </ul>
             </nav>
-        </div>
-        <img class="logo1" src="bilder/logo_klein.png" alt="Logo von Angelgeräte Meissner">
-        <div class="mainDiv">
-            <header>
-                <nav id="bigNav">
-                    <ul>
-                        <li><a href="index.html">Angelladen</a></li>
-                        <li><a id="active" href="news.html">News</a></li>
-                        <li><a href="angelkarten.html">Angelkarten</a></li>
-                        <li><a href="serviceangebot.html">Serviceangebot</a></li>
-                        <li><a href="kontakt.html">Anfahrt / Kontakt</a></li>
-                        <li><a href="partner.html">Partner</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <hr>
-            <div id="newsformat">
+        </header>
+        <hr>
+        <div id="newsformat">
             <p>
                 <!--Hier Text einfügen (Zeile 60 ff)
                     Für Überschriften folgendes Format: " <h3> Text hier </h3> "
                     Für Zeilenumbrüche folgendes Format: " <br> " -->
-                <h1>Aktuelles im Angelladen</h1>
-                Hier findet ihr alle wichtigen Ankündigungen. <br>
-                Neue Einträge folgen demnächst.
-                <br><br>
-                <strong>Mitarbeiter des Monats</strong>
-                <br><br>
-                <img id="chico" src="bilder/chico.png" alt="Chico vom Klostersee">
-            </p>
+            <h1>Aktuelles im Angelladen</h1>
+            Hier findet ihr alle wichtigen Ankündigungen. <br>
+            <br><br>
+            <h3>Neue T-shirts</h3>
+            <div id="farbanzeige">
+                <img class="newsimg" src="bilder/T_shirts/brassenkoenig.png"
+                    alt="Comiczeichnung einer Brasse und Wurm am Haken, darüber der Schriftzug 'Brassen König' mit einer Krone">
             </div>
+            <div id="farbauswahl">
+                <input type="radio" name="color" class="radio" id="tshirtBlack" value="black" checked>
+                <input type="radio" name="color" class="radio" id="tshirtGreen" value="#233000"> <!--Fraben der radio buttons uebergeben an #farbanzeige div-->
+                <input type="radio" name="color" class="radio" id="tshirtPink" value="#db00db">
+            </div>
+            <br>
+            Ab sofort sind unsere neue T-shirts <strong>"Brassen König"</strong> im Angelladen verfügbar.<br><br>
+            <strong>Mitarbeiter des Monats</strong>
+            <br><br>
+            <img id="chico" src="bilder/chico.png" alt="Chico vom Klostersee">
+            </p>
         </div>
-        <div class="footer">
-            <footer>
-                <h3>Öffnungszeiten</h3>
-                <p>
-                    <strong>März bis November:</strong><br>
-                    Dienstag - Freitag  9-18 Uhr<br>
-                    Sonnabend 9-12 Uhr<br>
-                    <br>
-                    <strong>Dezember bis Februar:</strong><br>
-                    Dienstag - Freitag 9-17 Uhr 
-                </p>
-                <h3>Adresse</h3>
-                <p>
-                    Angelgeräte Meißner
-                    Grünstr. 
-                    15344 Strausberg
-                    Tel. 03341 23600 
-                </p>
-                <img class="logo1" src="bilder/logo_klein.png" alt="Logo von Angelgeräte Meissner">
-                <ul>
-                    <li><a id="formal" href="impressum.html">Impressum</a></li>
-                    <li><a id="formal" href="datenschutz.html">Datenschutz</a></li>
-                </ul>
-            </footer>
-        </div>
-    </body>
+    </div>
+    <div class="footer">
+        <footer>
+            <h3>Öffnungszeiten</h3>
+            <p>
+                <strong>März bis November:</strong><br>
+                Dienstag - Freitag 9-18 Uhr<br>
+                Sonnabend 9-12 Uhr<br>
+                <br>
+                <strong>Dezember bis Februar:</strong><br>
+                Dienstag - Freitag 9-17 Uhr
+            </p>
+            <h3>Adresse</h3>
+            <p>
+                Angelgeräte Meißner
+                Grünstr.
+                15344 Strausberg
+                Tel. 03341 23600
+            </p>
+            <img class="logo1" src="bilder/logo_klein.png" alt="Logo von Angelgeräte Meissner">
+            <ul>
+                <li><a id="formal" href="impressum.html">Impressum</a></li>
+                <li><a id="formal" href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
